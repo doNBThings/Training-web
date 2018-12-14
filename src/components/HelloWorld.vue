@@ -90,7 +90,25 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  created: function () {
+    this.getHotData()
+  },
+  methods: {
+    getHotData: function () {
+      var self = this
+      this.$http({
+        method: 'get',
+        url: 'http://127.0.0.1:9005/search/api/search/aggregation?topN=6'
+      }).then(function (response) {
+        self.tags = response.data.data.rsData
+      })
+        .catch(function (error) {
+          console.log(error)
+        })
+    }
   }
+
 }
 </script>
 

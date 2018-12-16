@@ -12,10 +12,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api/test1': {
-        target: 'http://127.0.0.1:8000',  //目标接口域名
+        target: 'http://127.0.0.1:9100',  //目标接口域名
         changeOrigin: true,  //是否跨域
         pathRewrite: {
-          '^/api/test1': '/test1'   //重写接口
+          '^/api/test1': '/'   //重写接口
         }
       }
     },

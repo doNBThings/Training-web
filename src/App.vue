@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <div>公共菜单（待开发）
+      <router-link to="/">helloworld</router-link>
+      <router-link to="/test1/first">第一个测试页面</router-link>
+    </div>
     <router-view/>
   </div>
 </template>
